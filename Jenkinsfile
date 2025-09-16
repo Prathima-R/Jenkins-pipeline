@@ -8,7 +8,7 @@ pipeline{
 
 
 	stages{
-		stage('git-checkout-git')
+		stage('git-checkout')
 			steps{
 				git branch: 'main', url: 'https://github.com/Prathima-R/Jenkins-pipeline.git'
 			}
