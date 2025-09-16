@@ -10,7 +10,7 @@ pipeline{
 	stages{
 		stage('git-checkout'){
 			steps{
-				git branch: 'verion-1', url: 'https://github.com/ManojKRISHNAPPA/test-1.git'
+				git branch: 'main', url: ''
 			}
 		}
 
