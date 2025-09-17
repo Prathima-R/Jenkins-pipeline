@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'version-1', url: 'https://github.com/Prathima-R/Jenkins-pipeline.git'
+                git branch: 'main', url: 'https://github.com/Prathima-R/Jenkins-pipeline.git'
             }
         }
 
