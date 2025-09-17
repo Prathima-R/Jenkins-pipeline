@@ -12,6 +12,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Prathima-R/Jenkins-pipeline.git'
             }
         }
+stage('Compile') {
+            steps {
+                sh "mvn compile"
+            }
+        }
 
         
         stage('Build') {
