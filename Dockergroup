@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Update and install Docker
+sudo apt-get update -y
+sudo apt-get install docker.io -y
+
+# Add users to docker group
+sudo usermod -aG docker ubuntu
+sudo usermod -aG docker jenkins
+
+# Set Docker socket permissions
+sudo chown root:docker /var/run/docker.sock
+sudo chmod 660 /var/run/docker.sock
+
+# Restart Docker service
+sudo systemctl restart docker
+
+# Restart Jenkins service to pick up new group membership
+sudo systemctl restart jenkins
+
+# Check Docker version
+docker --version
